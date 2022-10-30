@@ -4,7 +4,7 @@ from aiogram.dispatcher.filters import Command, MediaGroupFilter
 from loader import dp, bot
 
 channel_id = -1001768934286
-channel_link = "@avto_elon_avtobozor"
+channel_link = "https://t.me/+U6TIhKU7AUlkMjMy"
 
 
 @dp.message_handler(content_types=types.ContentType.TEXT)
@@ -34,7 +34,8 @@ async def send_any(message: types.Message):
             else:
                 txt = txt + f"\n{tx}"
 
-    txt = f"<b>{txt} 👉 {channel_link} </b> "
+    txt = f"<b>{txt} \n" \
+          f"👉 {channel_link} </b> "
 
     if message.content_type == "photo":
         file_id = message.photo[-1].file_id
